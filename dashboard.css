@@ -1,0 +1,286 @@
+/* css/dashboard.css */
+.namos-status-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.status-completed {
+  background: #dff3ea;
+  color: #2f8f6b;
+}
+
+.status-pending {
+  background: #f6e8bf;
+  color: #9a7a1f;
+}
+
+.status-cancelled {
+  background: #f8ddd6;
+  color: #b35b45;
+}
+
+.status-default {
+  background: #eceff3;
+  color: #5f6b7a;
+}
+
+.namos-dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 16px;
+  font-family: 'Oracle Sans', Arial, sans-serif;
+}
+
+.namos-kpi-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.namos-kpi-card {
+  flex: 1 1 180px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  transition: transform 0.2s ease;
+  border-top: 3px solid #ccc;
+}
+
+.namos-kpi-card:hover {
+  transform: translateY(-3px);
+}
+
+.namos-kpi-icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 10px;
+  background: #f5f7fb;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.namos-kpi-icon .fa {
+  font-size: 18px;
+}
+
+.namos-kpi-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.namos-kpi-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: #1a1a2e;
+  line-height: 1.1;
+}
+
+.namos-kpi-label {
+  font-size: 13px;
+  color: #666;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.namos-charts-row {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.namos-chart-half {
+  flex: 1 1 45%;
+  min-width: 280px;
+}
+
+.namos-chart-container {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 16px;
+  height: 340px;
+  position: relative;
+}
+
+.namos-chart-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1a1a2e;
+}
+
+.namos-chart-container canvas {
+  width: 100% !important;
+  height: 270px !important;
+  display: block;
+}
+
+.namos-table-container {
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  padding: 16px;
+  overflow-x: auto;
+}
+
+.namos-table-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.namos-table-header input,
+input[data-target-table] {
+  border: 1px solid #d8d8d8;
+  border-radius: 8px;
+  padding: 8px 12px;
+  min-width: 190px;
+  font-size: 13px;
+  outline: none;
+}
+
+.namos-table-header input:focus,
+input[data-target-table]:focus {
+  border-color: #7aa7e0;
+}
+
+.namos-tbl {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+
+.namos-tbl th {
+  text-align: left;
+  padding: 12px 10px;
+  border-bottom: 1px solid #e6e6e6;
+  color: #666;
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.4px;
+}
+
+.namos-tbl td {
+  padding: 12px 10px;
+  border-bottom: 1px solid #f0f0f0;
+  color: #222;
+}
+
+.namos-tbl tr:hover td {
+  background: #fafafa;
+}
+
+.namos-empty,
+.namos-error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 120px;
+  color: #7a7a7a;
+  font-size: 14px;
+}
+
+.namos-error {
+  color: #c0392b;
+}
+
+@media (max-width: 768px) {
+  .namos-chart-half {
+    flex: 1 1 100%;
+  }
+
+  .namos-kpi-card {
+    flex: 1 1 140px;
+  }
+
+  .namos-table-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
+
+
+.namos-kpi-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.namos-kpi-card {
+  flex: 1 1 180px;
+  min-width: 180px;
+  background: #fff;
+  border: 1px solid #e6e6e6;
+  border-top: 3px solid #4a90e2;
+  border-radius: 10px;
+  box-shadow: none;
+  padding: 14px 16px 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  transition: all 0.2s ease;
+}
+
+.namos-kpi-card:hover {
+  transform: translateY(-1px);
+}
+
+.namos-kpi-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 8px;
+  background: #f7f3ef;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.namos-kpi-icon .fa {
+  font-size: 13px;
+  color: #a77b5d;
+}
+
+.namos-kpi-value {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #222;
+  margin: 0;
+}
+
+.namos-kpi-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #444;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+  margin: 0;
+}
+
+.namos-kpi-subtext {
+  font-size: 11px;
+  font-weight: 600;
+  margin-top: 2px;
+}
+
+.namos-kpi-subtext.positive {
+  color: #1f8b6a;
+}
+
+.namos-kpi-subtext.negative {
+  color: #b85c38;
+}
